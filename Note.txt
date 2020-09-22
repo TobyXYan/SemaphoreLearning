@@ -1,0 +1,7 @@
+Semaphore:
+CreateSemaphore(NULL,1,3,TEXT("SemaphoreLearning"));//safe ptr, initial count, max count, name
+
+//1 means the initial available number of resource, when we call
+//WaitForSingleObject(m_semaphore,INFINITE); the available count will reduce to 0
+//only when available count>0 the next WaitForSingleObject can continue to go down
+//we can call ReleaseSemaphore(m_semaphore,1, NULL);
